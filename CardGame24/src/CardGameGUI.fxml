@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CardGameGUIController">
+	<center>
+		<AnchorPane prefHeight="430.0" prefWidth="580.0" BorderPane.alignment="CENTER">
+			<children>
+				<GridPane layoutX="23.0" layoutY="125.0" maxHeight="200.0" prefHeight="200.0" prefWidth="520.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<ImageView fx:id="cardInWindow1" fitHeight="204.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@CardPictures/3_of_hearts.png" />
+							</image>
+						</ImageView>
+						<ImageView fx:id="cardInWindow2" fitHeight="204.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+							<image>
+								<Image url="@CardPictures/king_of_spades.png" />
+							</image>
+						</ImageView>
+						<ImageView fx:id="cardInWindow3" fitHeight="204.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+							<image>
+								<Image url="@CardPictures/4_of_diamonds.png" />
+							</image>
+						</ImageView>
+						<ImageView fx:id="cardInWindow4" fitHeight="204.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+							<image>
+								<Image url="@CardPictures/2_of_spades.png" />
+							</image>
+						</ImageView>
+					</children>
+				</GridPane>
+				<Button layoutX="25.0" layoutY="50.0" mnemonicParsing="false" onAction="#findSolution" prefHeight="35.0" prefWidth="159.0" text="Find a Solution">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</Button>
+				<Label layoutX="25.0" layoutY="370.0" prefHeight="35.0" prefWidth="158.0" text="Enter an expression:">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</Label>
+				<TextField fx:id="solutionTextField" layoutX="201.0" layoutY="50.0" prefHeight="35.0" prefWidth="230.0" text="3 + 13 + (4 * 2)">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</TextField>
+				<TextField fx:id="expressionTextField" layoutX="201.0" layoutY="370.0" prefHeight="35.0" prefWidth="230.0">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</TextField>
+				<Button fx:id="refreshButton" layoutX="450.0" layoutY="50.0" mnemonicParsing="false" onAction="#refresh" prefHeight="35.0" prefWidth="90.0" text="Refresh">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</Button>
+				<Button fx:id="verifyButton" layoutX="450.0" layoutY="370.0" mnemonicParsing="false" onAction="#verify" prefHeight="35.0" prefWidth="90.0" text="Verify">
+					<font>
+						<Font name="System Bold" size="15.0" />
+					</font>
+				</Button>
+				<MenuBar layoutY="-1.0" prefHeight="25.0" prefWidth="584.0">
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#aboutTheApplication" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>
